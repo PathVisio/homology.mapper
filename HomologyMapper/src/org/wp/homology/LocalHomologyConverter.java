@@ -24,7 +24,7 @@ public class LocalHomologyConverter {
 				LocalHomologyConverter converter = new LocalHomologyConverter();
 				converter.convertPathways(conf);
 			} catch (IOException e) {
-				System.out.println("Cannot open config file " + args[0]);
+				System.out.println("Cannot open one of the config files: " + e.getMessage());
 			} catch (ClassNotFoundException e) {
 				System.out.println("Cannot set up ID mapper");
 			} catch (IDMapperException e) {
