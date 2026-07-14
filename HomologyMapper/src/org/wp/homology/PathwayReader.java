@@ -72,6 +72,16 @@ public class PathwayReader {
     					pathways.put(f.getName(), pathway);
     				}
                 }
+			} else {
+			    if(f.getName().endsWith(".gpml")) {
+    				Pathway pathway = new Pathway();
+    				try {
+    					pathway.readFromXml(f, true);
+    				} catch (ConverterException e) {
+    					System.out.println("Could not parse pathway: " + f.getName());
+    				}
+    				pathways.put(f.getName(), pathway);
+   				}
 			}
 			}	
 		return pathways;
