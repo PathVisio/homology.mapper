@@ -2,4 +2,5 @@ bin/
 derby.log
 resources/
 .metadata/
-
+test/input/*
+test/output/*
